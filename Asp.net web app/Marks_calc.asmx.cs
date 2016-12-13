@@ -18,6 +18,38 @@ namespace Asp.net_web_app
     {
 
         [WebMethod]
+        public double Plus(double a, double b)
+
+        {
+            return a + b;
+        }
+       
+
+
+
+        [WebMethod]
+        public double Calc(int Num_of_marks, string Marks)
+        {
+            int summ = 0;
+            for (int i = 0; i < Num_of_marks; i++)
+            {
+                int j = 0;
+                for (; j < Marks.Length; j++)
+                {
+                    if (Marks.ElementAt(j).Equals(' ')) break;
+                }
+                summ += Convert.ToInt32(Marks.Substring(0, j));
+                if (j < Marks.Length)
+                    Marks = Marks.Substring(j + 1, Marks.Length - j - 1);
+            }
+
+            return (double)summ / Num_of_marks;
+        }
+
+    }
+}
+
+[WebMethod]
         public double Calc(int Num_of_marks, string Marks)
         {
             int summ = 0;
