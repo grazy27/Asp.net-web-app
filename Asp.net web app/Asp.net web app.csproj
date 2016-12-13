@@ -111,6 +111,7 @@
     <Content Include="WebTemp.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clast65654643s1.cs" />
     <Compile Include="Deploy destroy.cs" />
     <Compile Include="Marks_calc.asmx.cs">
       <DependentUpon>Marks_calc.asmx</DependentUpon>
